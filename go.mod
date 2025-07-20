@@ -1,4 +1,4 @@
-module github.com/0supa/func_supa
+module github.com/0supa/supa8
 
 go 1.21.6
 

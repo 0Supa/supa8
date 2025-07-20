@@ -29,7 +29,7 @@ var (
 				Name    string
 				Version string
 			}{
-				{Name: "func_supa", Version: "0.1"},
+				{Name: "supa8", Version: "0.1"},
 			},
 		},
 	})

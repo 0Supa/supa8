@@ -9,10 +9,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0supa/func_supa/config"
-	"github.com/0supa/func_supa/fun/api"
-	api_kappa "github.com/0supa/func_supa/fun/api/kappa"
-	"github.com/0supa/func_supa/fun/utils"
+	"github.com/0supa/supa8/config"
+	"github.com/0supa/supa8/fun/api"
+	api_kappa "github.com/0supa/supa8/fun/api/kappa"
+	"github.com/0supa/supa8/fun/utils"
 )
 
 type TwitchGQLPayload struct {

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/0supa/func_supa/config"
-	. "github.com/0supa/func_supa/fun"
-	. "github.com/0supa/func_supa/fun/api/twitch"
+	"github.com/0supa/supa8/config"
+	. "github.com/0supa/supa8/fun"
+	. "github.com/0supa/supa8/fun/api/twitch"
 	"github.com/gempir/go-twitch-irc/v4"
 	regexp "github.com/wasilibs/go-re2"
 )

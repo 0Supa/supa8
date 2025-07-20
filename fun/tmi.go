@@ -5,8 +5,8 @@ import (
 	"os"
 	"slices"
 
-	"github.com/0supa/func_supa/config"
-	api_twitch "github.com/0supa/func_supa/fun/api/twitch"
+	"github.com/0supa/supa8/config"
+	api_twitch "github.com/0supa/supa8/fun/api/twitch"
 
 	"github.com/gempir/go-twitch-irc/v4"
 )

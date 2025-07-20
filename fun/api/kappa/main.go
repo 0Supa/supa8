@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"net/textproto"
 
-	"github.com/0supa/func_supa/fun/api"
-	"github.com/0supa/func_supa/fun/utils"
+	"github.com/0supa/supa8/fun/api"
+	"github.com/0supa/supa8/fun/utils"
 )
 
 type FileUpload struct {

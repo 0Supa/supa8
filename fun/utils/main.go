@@ -5,7 +5,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/0supa/func_supa/config"
+	"github.com/0supa/supa8/config"
 )
 
 var QuoteEscaper = strings.NewReplacer("\\", "\\\\", `"`, "\\\"")

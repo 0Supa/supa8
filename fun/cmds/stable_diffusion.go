@@ -3,10 +3,10 @@ package fun
 import (
 	"strings"
 
-	. "github.com/0supa/func_supa/fun"
-	. "github.com/0supa/func_supa/fun/api/cloudflare"
-	api_kappa "github.com/0supa/func_supa/fun/api/kappa"
-	. "github.com/0supa/func_supa/fun/api/twitch"
+	. "github.com/0supa/supa8/fun"
+	. "github.com/0supa/supa8/fun/api/cloudflare"
+	api_kappa "github.com/0supa/supa8/fun/api/kappa"
+	. "github.com/0supa/supa8/fun/api/twitch"
 	"github.com/gempir/go-twitch-irc/v4"
 )
 

@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	. "github.com/0supa/func_supa/fun"
-	logs_db "github.com/0supa/func_supa/fun/api/clickhouse_db"
-	. "github.com/0supa/func_supa/fun/api/twitch"
+	. "github.com/0supa/supa8/fun"
+	logs_db "github.com/0supa/supa8/fun/api/clickhouse_db"
+	. "github.com/0supa/supa8/fun/api/twitch"
 	"github.com/gempir/go-twitch-irc/v4"
 )
 

@@ -6,11 +6,11 @@ import (
 	"io"
 	"strings"
 
-	. "github.com/0supa/func_supa/fun"
-	logs_db "github.com/0supa/func_supa/fun/api/clickhouse_db"
-	api_kappa "github.com/0supa/func_supa/fun/api/kappa"
-	. "github.com/0supa/func_supa/fun/api/twitch"
-	"github.com/0supa/func_supa/fun/utils"
+	. "github.com/0supa/supa8/fun"
+	logs_db "github.com/0supa/supa8/fun/api/clickhouse_db"
+	api_kappa "github.com/0supa/supa8/fun/api/kappa"
+	. "github.com/0supa/supa8/fun/api/twitch"
+	"github.com/0supa/supa8/fun/utils"
 	"github.com/gempir/go-twitch-irc/v4"
 	"github.com/olekukonko/tablewriter"
 )
