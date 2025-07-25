@@ -44,6 +44,7 @@ SELECT
 FROM rustlog.message_structured
 WHERE user_id = ? AND message_type = 1
 GROUP BY channel_id
+ORDER BY lines DESC;
 `, user.ID, user.ID)
 			if err != nil {
 				return
