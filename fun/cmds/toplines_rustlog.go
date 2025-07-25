@@ -19,11 +19,16 @@ func init() {
 		Name: "toplines",
 		Handler: func(m twitch.PrivateMessage) (err error) {
 			args := strings.Split(m.Message, " ")
-			if len(args) < 2 || args[0] != "`toplines" {
+			if args[0] != "`toplines" {
 				return
 			}
 
-			user, err := GetUser(args[1], "")
+			target := m.User.Name
+			if len(args) >= 2 {
+				target = args[1]
+			}
+
+			user, err := GetUser(target, "")
 			if err != nil {
 				Say(m.RoomID, "failed getting user: "+err.Error(), m.ID)
 				return
