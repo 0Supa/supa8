@@ -10,7 +10,6 @@ import (
 	logs_db "github.com/0supa/supa8/fun/api/clickhouse_db"
 	api_kappa "github.com/0supa/supa8/fun/api/kappa"
 	. "github.com/0supa/supa8/fun/api/twitch"
-	"github.com/0supa/supa8/fun/utils"
 	"github.com/gempir/go-twitch-irc/v4"
 	"github.com/olekukonko/tablewriter"
 )
@@ -20,7 +19,7 @@ func init() {
 		Name: "toplines",
 		Handler: func(m twitch.PrivateMessage) (err error) {
 			args := strings.Split(m.Message, " ")
-			if !utils.IsPrivileged(m.User.ID) || len(args) < 2 || args[0] != "`toplines" {
+			if len(args) < 2 || args[0] != "`toplines" {
 				return
 			}
 
