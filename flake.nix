@@ -16,15 +16,39 @@
         pname = pname;
         version = "git-${self.rev or "dirty"}";
         src = ./.;
-        vendorHash = null;
+        vendorHash = "sha256-izsIDqXlHH54cujpkrsAvgPGed6g2sjLU61MpLIRrJg=";
       };
     in
     {
       packages.${system}.default = goServer;
 
       nixosModules.default =
-        { config, pkgs, ... }:
         {
+          config,
+          lib,
+          pkgs,
+          ...
+        }:
+
+        let
+          cfg = config.services.${pname};
+        in
+        {
+          options.services.${pname} = {
+            authFile = lib.mkOption {
+              type = lib.types.path;
+              description = "Path to the bot's authentication file.";
+              example = "/etc/${pname}/auth.yml";
+            };
+          };
+
+          config.assertions = [
+            {
+              assertion = cfg.authFile != null;
+              message = "You must set services.${pname}.authFile.";
+            }
+          ];
+
           users.users.${user} = {
             isSystemUser = true;
             home = "/var/lib/${user}";
@@ -45,6 +69,8 @@
               WorkingDirectory = "/var/lib/${user}";
             };
           };
+
+          environment.etc."/var/lib/${user}/auth.yml".source = cfg.authFile;
         };
     };
 }
