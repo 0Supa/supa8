@@ -41,36 +41,6 @@ var httpClient = http.Client{Timeout: time.Minute}
 
 var log = logger.New(os.Stdout, "System ", logger.LstdFlags)
 
-func init() {
-	func() {
-		res, err := httpClient.Get("https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux")
-		if err != nil {
-			log.Println("failed downloading yt-dlp bin", err)
-			return
-		}
-		defer res.Body.Close()
-
-		out, err := os.Create("./bin/yt-dlp")
-		if err != nil {
-			log.Println("failed creating yt-dlp bin", err)
-			return
-		}
-		defer out.Close()
-
-		_, err = io.Copy(out, res.Body)
-		if err != nil {
-			log.Println("failed writing yt-dlp bin", err)
-			return
-		}
-
-		err = os.Chmod("./bin/yt-dlp", 0755)
-		if err != nil {
-			log.Println("failed setting +x on yt-dlp bin", err)
-			return
-		}
-	}()
-}
-
 func main() {
 	wg.Add(1)
 

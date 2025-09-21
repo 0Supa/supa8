@@ -47,7 +47,7 @@ func init() {
 				delete(cooldown, m.User.ID)
 			}()
 
-			cmd := exec.Command("./bin/yt-dlp",
+			cmd := exec.Command("yt-dlp",
 				"--force-ipv4",
 				"-S", "vcodec:h264",
 				"--max-filesize", "100M",
